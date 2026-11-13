@@ -76,7 +76,7 @@ export default function App() {
       color: 'emerald',
       icon: <ShoppingCart />,
       details: [
-        'Operations & Profitability Optimization: Managed website operations and coordinated cross-functional initiatives with international teams, contributing to the department achieving its highest profit margin within two years.',
+        'Operations & Profitability Optimization: Managed website operations and coordinated cross-functional initiatives with international teams.',
         'Process Standardization: Established product management SOPs to streamline workflows, strengthen O2O integration, and accelerate mobile revenue growth.'
       ]
     },
@@ -88,7 +88,7 @@ export default function App() {
       icon: <Rocket />,
       details: [
         'Venture Creation & Business Growth: Co-founded and developed a travel metasearch platform from the ground up, leading a cross-functional team of 25 members to establish a profitable business.',
-        'Traffic & SEO Strategy: Spearheaded SEO and traffic-growth initiatives, reaching five million searches per month and achieving 50% year-over-year growth in website traffic.'
+        'Traffic & SEO Strategy: Spearheaded SEO and traffic-growth initiatives.'
       ]
     },
     {
@@ -99,7 +99,7 @@ export default function App() {
       icon: <Presentation />,
       details: [
         'Product & Operations: Led large-scale charter-flight and charter-train procurement, product development, and sales strategies.',
-        'System Implementation: Coordinated ERP deployment that streamlined internal collaboration and boosted operational productivity by 60%–100%.'
+        'System Implementation: Coordinated ERP deployment that streamlined internal collaboration and boosted operational productivity.'
       ]
     }
   ];
@@ -313,11 +313,11 @@ export default function App() {
             </div>
             <div className="bg-white p-8 rounded-[2.5rem] paper-shadow border border-zinc-100">
               <h4 className="text-xl font-black text-zinc-900 mb-3 tracking-tight">E-commerce & Operations</h4>
-              <p className="text-zinc-600 font-medium leading-relaxed">Web operations, process improvement, and cross-functional coordination.</p>
+              <p className="text-zinc-600 font-medium leading-relaxed">Web operations, process improvement, O2O, SEO and cross-functional coordination.</p>
             </div>
             <div className="bg-white p-8 rounded-[2.5rem] paper-shadow border border-zinc-100">
               <h4 className="text-xl font-black text-zinc-900 mb-3 tracking-tight">Data & Digital Tools</h4>
-              <p className="text-zinc-600 font-medium leading-relaxed">SQL, Looker Studio, GA4, Google Apps Script, and generative AI tools.</p>
+              <p className="text-zinc-600 font-medium leading-relaxed">SQL, Looker Studio, GA4, Github, Google Apps Script, and AI tools.</p>
             </div>
           </div>
         </div>
