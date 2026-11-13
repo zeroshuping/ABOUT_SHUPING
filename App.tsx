@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, ChevronDown, CheckCircle2, Anchor, ShoppingCart, Presentation, Mail } from 'lucide-react';
+import { ChevronDown, CheckCircle2, Mail } from 'lucide-react';
 
 // --- Sub-components ---
 const SectionHeader: React.FC<{ title: string; subtitle?: string; dark?: boolean; annotation?: string }> = ({ title, subtitle, dark, annotation }) => (
@@ -62,8 +62,6 @@ export default function App() {
       role: 'Deck Officer',
       org: 'LNG Carrier',
       date: '2022.12 – 2025.09',
-      color: 'blue',
-      icon: <Anchor />,
       details: [
         'Cryogenic Operations: Managed −162°C LNG loading and discharging operations.',
         'Bridge & Safety: Handled navigational watches, bridge resource management, and supervised emergency/firefighting systems.'
@@ -73,8 +71,6 @@ export default function App() {
       role: 'e-Commerce Manager',
       org: 'Costco Wholesale Taiwan',
       date: '2017.10 – 2022.02',
-      color: 'emerald',
-      icon: <ShoppingCart />,
       details: [
         'Platform Operations: Directed website operations and cross-functional international alignment to maximize revenue.',
         'Process Standardization: Established product management SOPs to streamline workflows, strengthen O2O integration, and accelerate mobile growth.'
@@ -84,8 +80,6 @@ export default function App() {
       role: 'Co-founder',
       org: 'FunTime Metasearch',
       date: '2008.01 – 2017.10',
-      color: 'amber',
-      icon: <Rocket />,
       details: [
         'Venture Scaling: Built a travel metasearch platform from 0 to 1, leading a 25-member team to profitability.',
         'Traffic & SEO Strategy: Spearheaded SEO and traffic-growth initiatives.'
@@ -95,8 +89,6 @@ export default function App() {
       role: 'Product Line Manager / GM Office',
       org: 'ezTravel',
       date: '2002 – 2006',
-      color: 'blue',
-      icon: <Presentation />,
       details: [
         'Procurement & Strategy: Managed charter flight/train procurement and product development strategies.',
         'System Integration: Coordinated ERP deployment to boost internal operational productivity.'
@@ -130,22 +122,22 @@ export default function App() {
 
   return (
     <div className="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-[#fafaf9] text-zinc-800">
-      {/* Navigation */}
+      {/* Navigation - Optimized professional header labels */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${scrolled ? 'glass-nav py-3 md:py-4 shadow-sm border-b border-zinc-200/50' : 'py-6 md:py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           <button onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="group font-black text-xl md:text-2xl tracking-tighter">
             <span className="text-amber-600">LIN</span> <span className="text-zinc-900">SHUPING</span>
           </button>
-          <div className="hidden lg:flex items-center space-x-12 text-[11px] font-black uppercase tracking-[0.2em] text-zinc-400">
+          <div className="hidden lg:flex items-center space-x-12 text-[11px] font-black uppercase tracking-[0.25em] text-zinc-400">
             {[
-              { id: 'portfolio', label: 'I am' },
-              { id: 'timeline', label: 'I work' },
-              { id: 'skills', label: 'I have' }
+              { id: 'portfolio', label: 'IDENTITY' },
+              { id: 'timeline', label: 'EXPERIENCE' },
+              { id: 'skills', label: 'EXPERTISE' }
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToId(item.id)}
-                className="hover:text-amber-600 transition-colors relative group"
+                className="hover:text-amber-600 transition-colors relative group py-1"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-amber-500 transition-all group-hover:w-full"></span>
@@ -181,7 +173,7 @@ export default function App() {
             </h1>
             <div className="reveal-item space-y-4 max-w-xl mb-8 md:mb-10">
               <p className="text-lg md:text-xl font-normal text-zinc-600 leading-relaxed text-pretty">
-                20+ Years Cross-Domain Leadership: Scaling e-commerce platforms, coordinating global teams, and managing high-stakes marine operations with discipline.
+                20+ Years Cross-Domain Leadership: Scaling e-commerce platforms, coordinating global teams, and managing high-stakes marine operations with rigorous discipline.
               </p>
             </div>
             <button
@@ -247,7 +239,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Timeline Section - I WORK */}
+      {/* Timeline Section - I WORK (Icons removed for a clean, executive look) */}
       <section id="timeline" className="py-16 md:py-28 px-6 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="I work" annotation="Experience" />
@@ -256,16 +248,11 @@ export default function App() {
               <div key={idx} className="reveal-item bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] paper-shadow border border-zinc-100 flex flex-col md:flex-row gap-6 md:gap-10 group hover:border-amber-400/30 transition-all duration-500">
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-5 md:mb-6">
-                    <div className="flex items-center gap-4 md:block">
-                      <div className={`w-12 h-12 md:w-14 md:h-14 ${item.color === 'blue' ? 'bg-blue-500' : item.color === 'emerald' ? 'bg-emerald-500' : item.color === 'slate' ? 'bg-slate-500' : 'bg-amber-500'} text-white rounded-xl flex items-center justify-center shrink-0 shadow-md border-2 border-white mb-0 md:mb-4`}>
-                        {React.cloneElement(item.icon as React.ReactElement<any>, { className: "w-6 h-6", strokeWidth: 2.2 })}
-                      </div>
-                      <div className="max-w-md">
-                        <h4 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-amber-600 transition-colors leading-snug mb-0.5">
-                          {item.role}
-                        </h4>
-                        <p className="text-zinc-400 font-bold text-xs md:text-sm uppercase tracking-wider">{item.org}</p>
-                      </div>
+                    <div className="max-w-md">
+                      <h4 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-amber-600 transition-colors leading-snug mb-1">
+                        {item.role}
+                      </h4>
+                      <p className="text-zinc-400 font-bold text-xs md:text-sm uppercase tracking-wider">{item.org}</p>
                     </div>
                     <span className="text-[10px] md:text-xs font-bold text-zinc-500 bg-zinc-100 px-3 py-1.5 md:px-4 md:py-2 rounded-full tracking-wider mt-3 md:mt-0 self-start">
                       {item.date}
@@ -302,8 +289,8 @@ export default function App() {
               <p className="text-zinc-600 text-sm md:text-base leading-relaxed">Web operations, process improvement, O2O, SEO and cross-functional coordination.</p>
             </div>
             <div className="bg-white p-6 md:p-8 rounded-[2rem] paper-shadow border border-zinc-100">
-              <h4 className="text-lg font-bold text-zinc-900 mb-2">Tech & Management</h4>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">Cross-functional team leadership, 0→1 business launch, and workflow standardization.</p>
+              <h4 className="text-lg font-bold text-zinc-900 mb-2">Data & Digital Tools</h4>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">SQL, Looker Studio, GA4, Github, Google Apps Script, and AI tools.</p>
             </div>
           </div>
         </div>
