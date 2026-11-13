@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, ChevronDown, CheckCircle2, Anchor, ShoppingCart, Presentation, Mail } from 'lucide-react';
+import { Rocket, ChevronDown, CheckCircle2, Anchor, ShoppingCart, Presentation } from 'lucide-react';
 
 // --- Sub-components ---
 const SectionHeader: React.FC<{ title: string; subtitle?: string; dark?: boolean; annotation?: string }> = ({ title, subtitle, dark, annotation }) => (
@@ -141,7 +141,7 @@ export default function App() {
               { id: 'portfolio', label: 'I am' },
               { id: 'timeline', label: 'I work' },
               { id: 'skills', label: 'I have' },
-              { id: 'mission', label: 'Mission' }
+              { id: 'contact', label: 'Connect' }
             ].map((item) => (
               <button
                 key={item.id}
@@ -314,40 +314,32 @@ export default function App() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section id="mission" className="py-24 md:py-40 px-6 md:px-8 bg-zinc-900 text-white relative overflow-hidden">
+      {/* Connect / Footer Section */}
+      <section id="contact" className="py-24 md:py-40 px-6 md:px-8 bg-zinc-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
-          <SectionHeader title="Mission" annotation="Future Outlook" dark={true} />
-          <div className="max-w-4xl space-y-8">
-            <p className="text-2xl md:text-4xl font-bold leading-tight text-zinc-200 tracking-tight">
-              Ready to bring a pioneer's mindset, rigorous operational discipline, and cross-domain expertise to my next long-term career chapter.
+          <div className="mb-12">
+            <span className="text-amber-400 font-black tracking-[0.25em] uppercase text-[9px] md:text-[10px]">Connect</span>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-4 tracking-tight leading-none">
+              Shuping.<br />
+              Shopping.<br />
+              Shipping.
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-8">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-amber-400 tracking-wider uppercase">
+              Ready for the Next Mission
+            </h3>
+            <p className="text-xl md:text-2xl font-medium leading-relaxed text-zinc-300">
+              Ready to bring a pioneer's mindset, operational discipline, and cross-domain expertise to my next mission.
             </p>
-            <div className="flex flex-wrap gap-4 pt-6">
-              <button onClick={() => scrollToId('contact')} className="bg-amber-500 text-zinc-900 px-8 py-4 rounded-full font-black text-xs uppercase tracking-widest hover:bg-amber-400 transition-all">
-                Let's Connect
-              </button>
+            <div className="pt-4">
+              <span className="inline-block text-lg md:text-xl font-bold text-zinc-200 bg-zinc-800/80 px-6 py-3 rounded-2xl border border-zinc-700">
+                zeroshuping@gmail.com
+              </span>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Footer / Connect Section */}
-      <footer id="contact" className="py-20 px-6 md:px-8 bg-zinc-950 text-zinc-400 border-t border-zinc-800">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <div>
-            <span className="font-black text-2xl tracking-tighter text-white">
-              LIN <span className="text-amber-500">SHUPING</span>
-            </span>
-            <p className="text-sm text-zinc-500 mt-2">The Multi-Dimensional Integrator</p>
-          </div>
-          <div className="flex items-center space-x-6">
-            <a href="mailto:zeroshuping@gmail.com" className="flex items-center space-x-2 text-white hover:text-amber-500 transition-colors font-bold text-sm">
-              <Mail size={18} />
-              <span>zeroshuping@gmail.com</span>
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
