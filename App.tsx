@@ -299,7 +299,7 @@ export default function App() {
             </div>
             <div className="bg-white p-6 md:p-8 rounded-[2rem] paper-shadow border border-zinc-100">
               <h4 className="text-lg font-bold text-zinc-900 mb-2">Data & Digital Tools</h4>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">SQL, Looker Studio, GA4, Github, Google Apps Script, and AI tools.</p>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">SQL, Looker Studio, GA, Github, Google Apps Script, and AI tools.</p>
             </div>
           </div>
         </div>
