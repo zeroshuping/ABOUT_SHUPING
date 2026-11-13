@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Rocket, ChevronDown, CheckCircle2, Anchor, ShoppingCart, Presentation, Mail } from 'lucide-react';
-
 // --- Sub-components ---
 const SectionHeader: React.FC<{ title: string; subtitle?: string; dark?: boolean; annotation?: string }> = ({ title, subtitle, dark, annotation }) => (
   <div className="mb-10 md:mb-12">
