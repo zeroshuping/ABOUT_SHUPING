@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, CheckCircle2, Mail, Copy, Check } from 'lucide-react';
 
-// --- Sub-components ---
 const SectionHeader: React.FC<{ title: string; subtitle?: string; dark?: boolean; annotation?: string }> = ({ title, subtitle, dark, annotation }) => (
   <div className="mb-8 md:mb-10">
     <div className={`flex items-center space-x-3 mb-3 ${dark ? 'opacity-100' : ''}`}>
@@ -19,7 +18,6 @@ const SectionHeader: React.FC<{ title: string; subtitle?: string; dark?: boolean
   </div>
 );
 
-// --- Main App ---
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -131,7 +129,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-[#fafaf9] text-zinc-800">
-      {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${scrolled ? 'glass-nav py-3 md:py-4 shadow-sm border-b border-zinc-200/50' : 'py-6 md:py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           <button onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="group font-black text-xl md:text-2xl tracking-tighter cursor-pointer">
@@ -168,7 +165,6 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center pt-24 md:pt-32 pb-14 md:pb-20 px-6 md:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <div className="z-10 order-2 lg:order-1">
@@ -219,7 +215,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Identity Pillars Section - I AM */}
       <section id="portfolio" className="py-16 md:py-28 px-6 md:px-8 bg-white border-y border-zinc-100 relative">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="I am" annotation="Identity" />
@@ -248,7 +243,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Timeline Section - I WORK */}
       <section id="timeline" className="py-16 md:py-28 px-6 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="I work" annotation="Experience" />
@@ -284,7 +278,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Certifications & Skills Section - I HAVE */}
       <section id="skills" className="py-16 md:py-28 px-6 md:px-8 bg-zinc-50/50 border-t border-zinc-100">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="I have" annotation="Credentials & Toolkit" />
@@ -305,7 +298,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Connect / Footer Section */}
       <section id="contact" className="py-20 md:py-32 px-6 md:px-8 bg-zinc-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="mb-8">
