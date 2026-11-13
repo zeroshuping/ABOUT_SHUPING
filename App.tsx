@@ -182,8 +182,8 @@ export default function App() {
             </h1>
             <div className="reveal-item space-y-4 max-w-xl mb-8 md:mb-10">
               <p className="text-lg md:text-xl font-normal text-zinc-600 leading-relaxed text-pretty">
-               20+ years of high-stakes operations leadership across digital commerce and maritime shipping. I build resilient, data-driven systems that drive efficiency and profitability.
-                             </p>
+                20+ Years Cross-Domain Leadership: Scaling e-commerce platforms, coordinating global teams, and managing high-stakes marine operations with rigorous discipline.
+              </p>
             </div>
             <button
               onClick={() => scrollToId('portfolio')}
