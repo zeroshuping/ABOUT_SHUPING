@@ -181,7 +181,7 @@ export default function App() {
             </h1>
             <div className="reveal-item space-y-4 max-w-xl mb-8 md:mb-10">
               <p className="text-lg md:text-xl font-normal text-zinc-600 leading-relaxed text-pretty">
-                20+ Years Cross-Domain Leadership: Scaling e-commerce platforms, coordinating global teams, and managing high-stakes marine operations with rigorous discipline.
+                20+ Years Cross-Domain Leadership: Scaling e-commerce platforms, coordinating global teams, and managing high-stakes marine operations with discipline.
               </p>
             </div>
             <button
@@ -326,7 +326,7 @@ export default function App() {
             </p>
             <div className="pt-1 flex items-center space-x-3">
               <Mail size={18} className="text-amber-400 shrink-0" />
-              <span className="inline-block text-base md:text-lg font-semibold text-zinc-200 [zeroshuping@gmail.com](mailto:zeroshuping@gmail.com)">
+              <span className="inline-block text-base md:text-lg font-semibold text-zinc-200">
                 zeroshuping@gmail.com
               </span>
             </div>
