@@ -319,9 +319,9 @@ export default function App() {
           <div className="mb-10">
             <span className="text-amber-400 font-black tracking-[0.25em] uppercase text-[9px] md:text-[10px]">Connect</span>
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-4 tracking-tight leading-none">
-              Shuping.<br />
-              Shopping.<br />
-              Shipping.
+              Sh<span className="text-amber-500">u</span>ping.<br />
+              Sh<span className="text-emerald-500">o</span>pping.<br />
+              Sh<span className="text-blue-500">i</span>pping.
             </h2>
           </div>
           <div className="max-w-3xl space-y-6">
