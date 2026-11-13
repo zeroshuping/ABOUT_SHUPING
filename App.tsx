@@ -258,4 +258,96 @@ export default function App() {
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-5 md:mb-6">
                     <div className="max-w-md">
-                      <h4 className="text-xl md:text-2
+                      <h4 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-amber-600 transition-colors leading-snug mb-1">
+                        {item.role}
+                      </h4>
+                      <p className="text-zinc-400 font-bold text-xs md:text-sm uppercase tracking-wider">{item.org}</p>
+                    </div>
+                    <span className="text-[10px] md:text-xs font-bold text-zinc-500 bg-zinc-100 px-3 py-1.5 md:px-4 md:py-2 rounded-full tracking-wider mt-3 md:mt-0 self-start">
+                      {item.date}
+                    </span>
+                  </div>
+                  <div className="grid gap-3 md:gap-4">
+                    {item.details.map((detail, dIdx) => (
+                      <div key={dIdx} className="flex items-start gap-3.5 md:gap-4 p-4 md:p-6 bg-zinc-50/60 rounded-2xl border border-zinc-100">
+                        <CheckCircle2 size={18} className="text-amber-500 mt-1 shrink-0" />
+                        <p className="text-zinc-700 font-normal leading-relaxed text-sm sm:text-base">
+                          {detail}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications & Skills Section - I HAVE */}
+      <section id="skills" className="py-16 md:py-28 px-6 md:px-8 bg-zinc-50/50 border-t border-zinc-100">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeader title="I have" annotation="Credentials & Toolkit" />
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] paper-shadow border border-zinc-100">
+              <h4 className="text-lg font-bold text-zinc-900 mb-2">Certifications</h4>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">TOEIC 930, DELF B1, Deck officer and LNG-related Licenses, drone and yacht credentials.</p>
+            </div>
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] paper-shadow border border-zinc-100">
+              <h4 className="text-lg font-bold text-zinc-900 mb-2">E-commerce & Operations</h4>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">Web operations, process improvement, O2O, SEO and cross-functional coordination.</p>
+            </div>
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] paper-shadow border border-zinc-100">
+              <h4 className="text-lg font-bold text-zinc-900 mb-2">Data & Digital Tools</h4>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">SQL, Looker Studio, GA4, Github, Google Apps Script, and AI tools.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Connect / Footer Section */}
+      <section id="contact" className="py-20 md:py-32 px-6 md:px-8 bg-zinc-900 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="mb-8">
+            <span className="text-amber-400 font-bold tracking-[0.25em] uppercase text-[9px] md:text-[10px]">Connect</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-3 tracking-tight leading-tight">
+              Sh<span className="text-amber-500">u</span>ping.<br />
+              Sh<span className="text-emerald-500">o</span>pping.<br />
+              Sh<span className="text-blue-500">i</span>pping.
+            </h2>
+          </div>
+          <div className="max-w-2xl space-y-6">
+            <p className="text-lg md:text-xl font-normal leading-relaxed text-zinc-300">
+              Ready to bring a pioneer's mindset, operational discipline, and cross-domain expertise to my next mission.
+            </p>
+            <div className="pt-1">
+              <button
+                onClick={handleCopyEmail}
+                className="group inline-flex items-center space-x-3 bg-zinc-800 hover:bg-zinc-700/80 active:scale-95 px-5 py-3 rounded-2xl border border-zinc-700/80 transition-all cursor-pointer shadow-sm"
+                title="Click to copy email"
+              >
+                <Mail size={18} className="text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-base md:text-lg font-semibold text-zinc-200">
+                  zeroshuping@gmail.com
+                </span>
+                <span className="pl-2 border-l border-zinc-700 text-xs font-bold uppercase tracking-wider text-amber-400/90 flex items-center space-x-1">
+                  {copied ? (
+                    <>
+                      <Check size={14} className="text-emerald-400" />
+                      <span className="text-emerald-400">Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={14} className="text-zinc-400 group-hover:text-amber-400 transition-colors" />
+                      <span>Copy</span>
+                    </>
+                  )}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
