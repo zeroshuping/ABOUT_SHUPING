@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, ChevronDown, CheckCircle2, Anchor, ShoppingCart, Presentation } from 'lucide-react';
+import { Rocket, ChevronDown, CheckCircle2, Anchor, ShoppingCart, Presentation, Mail } from 'lucide-react';
 
 // --- Sub-components ---
 const SectionHeader: React.FC<{ title: string; subtitle?: string; dark?: boolean; annotation?: string }> = ({ title, subtitle, dark, annotation }) => (
-  <div className="mb-10 md:mb-12">
-    <div className={`flex items-center space-x-3 mb-4 ${dark ? 'opacity-100' : ''}`}>
+  <div className="mb-7 md:mb-8">
+    <div className={`flex items-center space-x-3 mb-3 ${dark ? 'opacity-100' : ''}`}>
       <div className={`h-[2px] w-8 md:w-10 ${dark ? 'bg-amber-400' : 'bg-amber-500'}`}></div>
       {annotation && (
         <span className={`${dark ? 'text-amber-400' : 'text-amber-600'} font-black tracking-[0.25em] uppercase text-[9px] md:text-[10px]`}>
@@ -13,7 +13,7 @@ const SectionHeader: React.FC<{ title: string; subtitle?: string; dark?: boolean
       )}
     </div>
     <div className="relative inline-block">
-      <h2 className={`text-5xl sm:text-6xl md:text-[8rem] font-black mb-8 tracking-tighter leading-none ${dark ? 'text-white' : 'text-zinc-900'}`}>{title}</h2>
+      <h2 className={`text-5xl sm:text-6xl md:text-[8rem] font-black mb-6 tracking-tighter leading-none ${dark ? 'text-white' : 'text-zinc-900'}`}>{title}</h2>
     </div>
     {subtitle && <p className={`text-lg md:text-2xl max-w-4xl font-medium leading-relaxed text-pretty ${dark ? 'text-zinc-300' : 'text-zinc-500'}`}>{subtitle}</p>}
   </div>
@@ -140,8 +140,7 @@ export default function App() {
             {[
               { id: 'portfolio', label: 'I am' },
               { id: 'timeline', label: 'I work' },
-              { id: 'skills', label: 'I have' },
-              { id: 'contact', label: 'Connect' }
+              { id: 'skills', label: 'I have' }
             ].map((item) => (
               <button
                 key={item.id}
@@ -169,18 +168,18 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-8 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="z-10 order-2 lg:order-1">
             <div className="reveal-item mb-4 md:mb-6">
               <span className="personal-note text-xl md:text-2xl">The Multi-Dimensional Integrator —</span>
             </div>
-            <h1 className="fluid-hero-text font-black text-zinc-900 flex flex-col mb-10 md:mb-12">
+            <h1 className="fluid-hero-text font-black text-zinc-900 flex flex-col mb-8 md:mb-10">
               <div className="reveal-item" style={{ transitionDelay: '0.1s' }}>Sh<span className="text-amber-500">u</span>ping.</div>
               <div className="reveal-item" style={{ transitionDelay: '0.2s' }}>Sh<span className="text-emerald-500">o</span>pping.</div>
               <div className="reveal-item" style={{ transitionDelay: '0.3s' }}>Sh<span className="text-blue-500">i</span>pping.</div>
             </h1>
-            <div className="reveal-item space-y-6 md:space-y-8 max-w-2xl mb-12 md:mb-16">
+            <div className="reveal-item space-y-5 md:space-y-6 max-w-2xl mb-10 md:mb-12">
               <p className="text-xl md:text-3xl font-bold text-zinc-700 leading-[1.3] tracking-tight text-pretty">
                 20+ Years Cross-Domain Leadership:<br />
                 <span className="text-zinc-400 font-medium">Scaling e-commerce platforms, coordinating global teams, and managing high-stakes marine operations with rigorous discipline.</span>
@@ -218,24 +217,24 @@ export default function App() {
               <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-2 opacity-70">Experience</span>
               <span className="text-2xl md:text-4xl font-black tracking-tighter">20Y+</span>
             </div>
-            <span className="personal-note absolute -bottom-12 md:-bottom-20 right-4 md:right-8 rotate-3 opacity-60 text-2xl md:text-3xl">Efficiency meets Impact.</span>
+            <span className="personal-note absolute -bottom-10 md:-bottom-16 right-4 md:right-8 rotate-3 opacity-60 text-2xl md:text-3xl">Efficiency meets Impact.</span>
           </div>
         </div>
       </section>
 
       {/* Identity Pillars Section - I AM */}
-      <section id="portfolio" className="py-24 md:py-40 px-6 md:px-8 bg-white border-y border-zinc-100 relative">
+      <section id="portfolio" className="py-16 md:py-28 px-6 md:px-8 bg-white border-y border-zinc-100 relative">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="I am" annotation="Identity" />
-          <div className="grid grid-cols-1 gap-16 md:gap-32 mt-12 md:mt-20">
+          <div className="grid grid-cols-1 gap-12 md:gap-24 mt-10 md:mt-16">
             {pillarData.map((item, idx) => (
-              <div key={idx} className="reveal-item group flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-20 max-w-6xl relative">
+              <div key={idx} className="reveal-item group flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-20 max-w-6xl relative">
                 <div className="relative shrink-0">
                   <h3 className="text-5xl md:text-8xl font-black text-zinc-900 tracking-tighter leading-none relative z-10">
                     Sh<span className={item.color === 'amber' ? 'text-amber-500' : item.color === 'emerald' ? 'text-emerald-500' : 'text-blue-500'}>{item.letter}</span>{item.label.substring(item.label.indexOf(item.letter) + 1)}
                   </h3>
                 </div>
-                <div className="flex-1 space-y-4 md:space-y-6">
+                <div className="flex-1 space-y-3 md:space-y-4">
                   <div className="flex items-center space-x-4">
                     <div className={`h-[2px] w-8 md:w-12 ${item.color === 'amber' ? 'bg-amber-500' : item.color === 'emerald' ? 'bg-emerald-500' : 'bg-blue-500'}`}></div>
                     <h4 className="text-xl md:text-3xl font-black text-zinc-900 tracking-tight">
@@ -253,14 +252,14 @@ export default function App() {
       </section>
 
       {/* Timeline Section - I WORK */}
-      <section id="timeline" className="py-24 md:py-40 px-6 md:px-8 bg-white">
+      <section id="timeline" className="py-16 md:py-28 px-6 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="I work" annotation="Experience" />
-          <div className="grid gap-8 md:gap-10">
+          <div className="grid gap-6 md:gap-8">
             {careerData.map((item, idx) => (
               <div key={idx} className="reveal-item bg-white px-7 py-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] paper-shadow border border-zinc-100 flex flex-col md:flex-row gap-6 md:gap-12 group hover:border-amber-400/30 transition-all duration-700">
                 <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-10">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-8">
                     <div className="flex items-center gap-5 md:block">
                       <div className={`w-16 h-16 ${item.color === 'blue' ? 'bg-blue-500' : item.color === 'emerald' ? 'bg-emerald-500' : item.color === 'slate' ? 'bg-slate-500' : 'bg-amber-500'} text-white rounded-2xl flex items-center justify-center shrink-0 shadow-lg border-4 border-white mb-0 md:mb-6`}>
                         {React.cloneElement(item.icon as React.ReactElement<any>, { className: "w-8 h-8", strokeWidth: 2.5 })}
@@ -276,10 +275,10 @@ export default function App() {
                       {item.date}
                     </span>
                   </div>
-                  <div className="grid gap-5 md:gap-6">
+                  <div className="grid gap-4 md:gap-5">
                     {item.details.map((detail, dIdx) => (
-                      <div key={dIdx} className="flex items-start gap-5 md:gap-6 p-6 md:p-10 bg-zinc-50/50 rounded-[2rem] md:rounded-[3rem] group-hover:bg-white transition-all shadow-sm group-hover:shadow-md border border-zinc-100/50">
-                        <CheckCircle2 size={24} className="text-amber-500 mt-1 shrink-0" />
+                      <div key={dIdx} className="flex items-start gap-4 md:gap-5 p-5 md:p-8 bg-zinc-50/50 rounded-[2rem] md:rounded-[2.5rem] group-hover:bg-white transition-all shadow-sm group-hover:shadow-md border border-zinc-100/50">
+                        <CheckCircle2 size={22} className="text-amber-500 mt-1 shrink-0" />
                         <p className="text-zinc-700 font-semibold leading-relaxed text-base sm:text-lg md:text-xl tracking-tight text-pretty">
                           {detail}
                         </p>
@@ -294,10 +293,10 @@ export default function App() {
       </section>
 
       {/* Certifications & Skills Section - I HAVE */}
-      <section id="skills" className="py-24 md:py-40 px-6 md:px-8 bg-zinc-50/50 border-t border-zinc-100">
+      <section id="skills" className="py-16 md:py-28 px-6 md:px-8 bg-zinc-50/50 border-t border-zinc-100">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="I have" annotation="Credentials & Toolkit" />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-white p-8 rounded-[2.5rem] paper-shadow border border-zinc-100">
               <h4 className="text-xl font-black text-zinc-900 mb-3 tracking-tight">Certifications</h4>
               <p className="text-zinc-600 font-medium leading-relaxed">TOEIC 930, DELF B1, Deck officer and LNG-related Licenses, drone and yacht credentials.</p>
@@ -315,9 +314,9 @@ export default function App() {
       </section>
 
       {/* Connect / Footer Section */}
-      <section id="contact" className="py-24 md:py-40 px-6 md:px-8 bg-zinc-900 text-white relative overflow-hidden">
+      <section id="contact" className="py-20 md:py-32 px-6 md:px-8 bg-zinc-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="mb-12">
+          <div className="mb-10">
             <span className="text-amber-400 font-black tracking-[0.25em] uppercase text-[9px] md:text-[10px]">Connect</span>
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-4 tracking-tight leading-none">
               Shuping.<br />
@@ -325,15 +324,13 @@ export default function App() {
               Shipping.
             </h2>
           </div>
-          <div className="max-w-3xl space-y-8">
-            <h3 className="text-2xl md:text-3xl font-extrabold text-amber-400 tracking-wider uppercase">
-              Ready for the Next Mission
-            </h3>
+          <div className="max-w-3xl space-y-6">
             <p className="text-xl md:text-2xl font-medium leading-relaxed text-zinc-300">
               Ready to bring a pioneer's mindset, operational discipline, and cross-domain expertise to my next mission.
             </p>
-            <div className="pt-4">
-              <span className="inline-block text-lg md:text-xl font-bold text-zinc-200 bg-zinc-800/80 px-6 py-3 rounded-2xl border border-zinc-700">
+            <div className="pt-2 flex items-center space-x-3">
+              <Mail size={20} className="text-amber-400 shrink-0" />
+              <span className="inline-block text-lg md:text-xl font-bold text-zinc-200">
                 zeroshuping@gmail.com
               </span>
             </div>
